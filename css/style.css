@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white:#ffffff;
+    --Black:#000000;
+    --ligthgray:#F6F7F8;
+    --Red:#FF3131;
+    --Green:#54CC0A;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: var(--ligthgray);
+}
+
+.produto{
+    gap: 4px;
+}
+
+.txt-produto{
+    margin-top: 30px;
+    gap: 2;
+}
+
+main, .main{
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 2px;
+    
+
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.main{
+    margin-bottom: 100px;
+}
+
+.fundo{
+    background-image: url("../imgs/bg.png");
+}
+
+.h2-produtos{
+    margin: 10px auto;
+    max-width: 1280px;
+    padding: 0 2px;
+}
+
+#cart-items{
+    max-height: 300px;
+    overflow: auto;
+}
+
+.box-cart{
+    height: 96px;
+    margin-bottom: 4px;
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+.box-cart-caixa{
+    width: 100%;
+    height: 100%;
+}
+
+.bg-green-600{
+    background-color: rgb(34 197 94);
+}
+
+.bg-red-500{
+    background-color: #FF3131;
+}
+
+.border-red-500{
+    border-color: #FF3131;
+}
+
+@media (min-width: 760px){
+    .md\:grid-cols-2{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
